@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zukwelihle Nqeto Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #2c3e50;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .navbar li {
+      margin-left: 2rem;
+    }
+
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .navbar a:hover {
+      color: #3498db;
+    }
+
+    /* Hero Section Social Icons */
+    .hero .social-links .button-link {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .hero .social-links .button-link:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      animation: slideBackground 30s ease-out infinite;
+    }
+
+    @keyframes slideBackground {
+      0% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Cray-Cray_6.jpeg');
+        background-size: cover;
+        background-position-y: 0%;
+      }
+      16.67% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Cray-Cray_6.jpeg');
+        background-size: cover;
+        background-position-y: 100%;
+      }
+      33.33% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Portflio.jpg');
+        background-size: cover;
+        background-position-y: 0%;
+      }
+      50% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Portflio.jpg');
+        background-size: cover;
+        background-position-y: 100%;
+      }
+      66.67% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Update.jpg');
+        background-size: cover;
+        background-position-y: 0%;
+      }
+      83.33% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Update.jpg');
+        background-size: cover;
+        background-position-y: 100%;
+      }
+      100% {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/Me/Cray-Cray_6.jpeg');
+        background-size: cover;
+        background-position-y: 0%;
+      }
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1580px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    /* About Section */
+    .about p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 5rem 2rem;
+      display: block;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .project-card p {
+      padding: 0 1rem 1rem;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-card .button-link {
+      margin: 0 1rem 1rem;
+      align-self: center;
+    }
+
+    /* Button Link Styles */
+    .button-link {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'Arial', sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button-link:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+
+    /* Skills and Experience Section */
+    .skills {
+      padding: 5rem 2rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.7)), url('/images/background_texture.jpg'), #2c3e50;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .skills::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      z-index: 1;
+    }
+
+    .skills h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #ecf0f1;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .skills-experience-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 2;
+      background: rgba(249, 249, 249, 0.85);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skills-list {
+      flex: 1;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3px);
+      max-width: 450px;
+    }
+
+    .skills-list h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .skill-category {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-category h4 {
+      font-size: 1.2rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-category h4:hover {
+      background-color: #e6f0fa;
+    }
+
+    .skill-category.active h4 {
+      background-color: #d1e7ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: #2c3e50;
+    }
+
+    .skill-category h4::after {
+      content: '▶';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .skill-category.active h4::after {
+      transform: rotate(90deg);
+    }
+
+    .skill-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+    }
+
+    .skill-category.active .skill-content {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 0.5rem;
+    }
+
+    .skill-category .skill {
+      display: inline-block;
+      background: linear-gradient(45deg, #4facfe, #00f2fe);
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .skill-category .skill:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      cursor: pointer;
+    }
+
+    .experience-list {
+      flex: 1;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3px);
+      max-width: 450px;
+    }
+
+    .experience-list h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .experience-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item h4 {
+      font-size: 1.3rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .experience-item h4:hover {
+      background-color: #e6f0fa;
+    }
+
+    .experience-item.active h4 {
+      background-color: #d1e7ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: #2c3e50;
+    }
+
+    .experience-item h4::after {
+      content: '▶';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .experience-item.active h4::after {
+      transform: rotate(90deg);
+    }
+
+    .experience-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+    }
+
+    .experience-item.active .experience-content {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 0.5rem;
+    }
+
+    .experience-item p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .experience-item p strong {
+      color: #2c3e50;
+    }
+
+    /* Contact Section */
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .contact button {
+      padding: 0.8rem;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #2980b9;
+    }
+
+    /* Document Icons Section */
+    .document-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .document-category {
+      position: relative;
+      text-align: center;
+    }
+
+    .document-icon {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .document-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .document-category span {
+      display: block;
+      margin-top: 0.5rem;
+      color: #2c3e50;
+      font-size: 1rem;
+    }
+
+    .document-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      max-height: 300px;
+      overflow-y: auto;
+      z-index: 10;
+      padding: 1rem;
+      list-style: none;
+    }
+
+    .document-list.active {
+      display: block;
+    }
+
+    .document-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      color: #333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .document-list li:hover {
+      background-color: #e6f0fa;
+    }
+
+    .document-list li span {
+      color: #3498db;
+      margin-left: 0.5rem;
+    }
+
+    .certificate-subcategory {
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate-subcategory h4 {
+      font-size: 1.1rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .certificate-subcategory h4:hover {
+      background-color: #e6f0fa;
+    }
+
+    .certificate-subcategory.active h4 {
+      background-color: #d1e7ff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: #2c3e50;
+    }
+
+    .certificate-subcategory h4::after {
+      content: '▶';
+      font-size: 0.9rem;
+      transition: transform 0.3s;
+    }
+
+    .certificate-subcategory.active h4::after {
+      transform: rotate(90deg);
+    }
+
+    .certificate-content {
+      max-height: 0;
+      overflow-y: auto;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+      padding-left: 1rem;
+    }
+
+    .certificate-subcategory.active .certificate-content {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 0.5rem;
+    }
+
+    /* Modal for Document Preview */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 10px;
+      max-width: 800px;
+      max-height: 90%;
+      overflow: auto;
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ddd;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content a {
+      padding: 0.5rem 1rem;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .modal-content a:hover {
+      background-color: #2980b9;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #2c3e50;
+      transition: color 0.3s;
+    }
+
+    .modal-close:hover {
+      color: #3498db;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .skills h2 {
+        font-size: 1.8rem;
+      }
+
+      .skills-experience-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        max-width: 90%;
+      }
+
+      .skills-list, .experience-list {
+        padding: 1rem;
+        max-width: 100%;
+      }
+
+      .skills-list h3, .experience-list h3 {
+        font-size: 1.5rem;
+      }
+
+      .skill-category h4, .experience-item h4, .certificate-subcategory h4 {
+        font-size: 1.1rem;
+      }
+
+      .skill-category .skill {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+      }
+
+      .experience-item p {
+        font-size: 0.9rem;
+      }
+
+      .document-icons {
+        gap: 1rem;
+      }
+
+      .document-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .document-list {
+        min-width: 150px;
+        max-height: 200px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card img {
+        height: 300px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .skills-list {
+        max-width: 450px;
+      }
+
+      .experience-list {
+        max-width: 450px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .navbar ul {
+        justify-content: center;
+      }
+
+      .navbar li {
+        margin: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div>
+      <h1>Hi, I'm Zukwelihle Nqeto</h1>
+      <p>Full-Stack Developer | Artist | Creative Thinker</p>
+      <div class="social-links">
+        <a href="https://github.com/LihleNqeto" class="button-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/lihle-nqeto/" class="button-link">LinkedIn</a>
+        <a href="https://www.salesforce.com/trailblazer/znqeto" class="button-link">Trailhead</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>I'm a passionate full-stack developer with expertise in building robust web applications. With a strong foundation in both front-end and back-end technologies, I create seamless user experiences backed by efficient, scalable server architectures.
+
+      My journey in software development began 5 years ago, and I've since worked on diverse projects ranging from e-commerce platforms to data visualization tools. I enjoy solving complex problems and continuously expanding my technical knowledge.
+
+      When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blog posts and community events.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/images/Project/Paternoster.jpg" alt="Paternoster Lodge">
+        <h3>Paternoster Lodge</h3>
+        <p>Crafted using React.js, the Paternoster Lodge website offers a seamless and visually engaging experience that reflects the charm and tranquility of the West Coast. With a focus on responsive design, intuitive navigation, and performance optimization, the site showcases the lodge’s accommodations, dining, and local attractions—inviting visitors to explore and book with ease.</p>
+        <a href="https://paternosterlodgedemo.netlify.app/" class="button-link">Visit Site</a>
+      </div>
+      <div class="project-card">
+        <img src="/images/Project/CivicSync.jpg" alt="CivicSync">
+        <h3>CivicSync</h3>
+        <p>CivicSync – Civic-Tech for Better Service Delivery
+        CivicSync is a web application built to improve municipal service delivery in South African townships and rural areas. It allows residents to report local issues—like potholes or waste problems—directly to municipalities through a mobile-friendly platform. By connecting citizens, officials, and contractors, CivicSync streamlines issue resolution while promoting transparency and accountability.</p>
+        <a href="https://civicsync.netlify.app/" class="button-link">Visit Site</a>
+      </div>
+      <div class="project-card">
+        <img src="/images/Project/Avanti.jpg" alt="Avanti Guest Lodge">
+        <h3>Avanti Guest Lodge</h3>
+        <p>Avanti Guest Lodge Website
+        A clean, responsive website built for Avanti Guest Lodge in Vredenburg, highlighting its en-suite rooms, self-catering units, and modern amenities like free WiFi, Smart TVs, and secure parking. The site emphasizes comfort, convenience, and proximity to key local facilities, offering guests a seamless browsing and booking experience.</p>
+        <a href="https://avantiguestlodge.netlify.app/" class="button-link">Visit Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills and Experience Section -->
+  <section id="skills" class="skills">
+    <h2>My Skills & Experience</h2>
+    <div class="skills-experience-container">
+      <div class="skills-list">
+        <h3>Skills</h3>
+        <div class="skill-category" data-category="front-end">
+          <h4 class="category-toggle">Front-End</h4>
+          <div class="skill-content">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+          </div>
+        </div>
+        <div class="skill-category" data-category="back-end">
+          <h4 class="category-toggle">Back-End</h4>
+          <div class="skill-content">
+            <span class="skill">Node.js</span>
+            <span class="skill">C#</span>
+            <span class="skill">PHP</span>
+            <span class="skill">ASP.NET</span>
+            <span class="skill">ASP.NET MVC</span>
+          </div>
+        </div>
+        <div class="skill-category" data-category="databases">
+          <h4 class="category-toggle">Databases</h4>
+          <div class="skill-content">
+            <span class="skill">SQL</span>
+            <span class="skill">PL/SQL</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">SQL Azure</span>
+            <span class="skill">Database Concepts</span>
+            <span class="skill">SQL and SOQL</span>
+          </div>
+        </div>
+        <div class="skill-category" data-category="tools">
+          <h4 class="category-toggle">Tools & Platforms</h4>
+          <div class="skill-content">
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Azure DevOps</span>
+            <span class="skill">phpMyAdmin</span>
+            <span class="skill">Netlify</span>
+            <span class="skill">Azure Functions</span>
+            <span class="skill">Microsoft Azure</span>
+            <span class="skill">CI/CD</span>
+          </div>
+        </div>
+        <div class="skill-category" data-category="mobile">
+          <h4 class="category-toggle">Mobile & Other</h4>
+          <div class="skill-content">
+            <span class="skill">Android Development</span>
+            <span class="skill">Java</span>
+            <span class="skill">Web Development</span>
+            <span class="skill">Web Applications</span>
+          </div>
+        </div>
+      </div>
+      <div class="experience-list">
+        <h3>Education</h3>
+        <div class="experience-item" data-experience="education">
+          <h4 class="experience-toggle">Varsity College</h4>
+          <div class="experience-content">
+            <p><strong>Diploma in Software Development, Computer Science</strong> | 2019 - 2021</p>
+            <p>Relevant Courses: Data Structures and Algorithms, Software Engineering, Database Management Systems, Web Development</p>
+          </div>
+        </div>
+        <h3>Work Experience</h3>
+        <div class="experience-item" data-experience="geeks4learning">
+          <h4 class="experience-toggle">Geeks4Learning / Riverside Software Solution</h4>
+          <div class="experience-content">
+            <p><strong>Systems Developer and Salesforce Admin and Platform I Developer (Learnership Sponsored by ABSA)</strong> | Duration: 12 months</p>
+            <p>Developed and maintained robust web and Salesforce applications, leveraging full-stack technologies and platform customization to enhance user experiences and business processes.</p>
+          </div>
+        </div>
+        <div class="experience-item" data-experience="dacti">
+          <h4 class="experience-toggle">Digital Associate</h4>
+          <div class="experience-content">
+            <p><strong>DACTI</strong> | December 2024 - Present</p>
+            <p>Contributing to digital transformation initiatives, applying skills in software development and platform management to support innovative projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="document-icons">
+      <div class="document-category" data-category="cv">
+        <img src="https://img.icons8.com/ios-filled/50/2c3e50/resume.png" alt="CV Icon" class="document-icon">
+        <span>CV</span>
+        <ul class="document-list">
+          <li data-file="docs\CV\Zukwelihle_Nqeto CV.pdf">Zukwelihle Nqeto CV<span>View</span></li>
+        </ul>
+      </div>
+      <div class="document-category" data-category="certificates">
+        <img src="https://img.icons8.com/ios-filled/50/2c3e50/certificate.png" alt="Certificates Icon" class="document-icon">
+        <span>Certificates</span>
+        <ul class="document-list">
+          <li class="certificate-subcategory" data-subcategory="hard-skills">
+            <h4>Hard-Skills</h4>
+            <div class="certificate-content">
+              <ul>
+                <li data-file="docs\Hard-Skills\Building AI Powered Chatbots Without Programming.pdf">AI Powered Chatbots Certificate<span>View</span></li>
+                <li data-file="docs\Hard-Skills\Generative AI Introduction and Applications.pdf">Generative AI Introduction and Applications Certificate<span>View</span></li>
+                <li data-file="docs\Hard-Skills\Generative AI Prompt Engineering Basics.pdf">Generative AI Prompt Engineering Basic Certificate<span>View</span></li>
+                <li data-file="docs\Hard-Skills\Introduction to Artificial Intelligence (AI).pdf">Introduction to Artificial Intelligence (AI) Certificate<span>View</span></li>
+                <li data-file="docs\Hard-Skills\Introduction to Cloud Computing_Z Nqeto.pdf">Introduction to Cloud Computing Certificate<span>View</span></li>
+                <li data-file="docs\Hard-Skills\Introduction to Software Engineering.pdf">Introduction to Software Engineering Certificate<span>View</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="certificate-subcategory" data-subcategory="soft-skills">
+            <h4>Soft-Skills</h4>
+            <div class="certificate-content">
+              <ul>
+                <li data-file="docs\Soft-Skills\Active Listening Enhancing Communication Skills.pdf">Active Listening Enhancing Communication Skills Certificate<span>View</span></li>
+                <li data-file="docs\Soft-Skills\Developing Interpersonal Skills.pdf">Developing Interpersonal Skills Certificate<span>View</span></li>
+                <li data-file="docs\Soft-Skills\Finding Your Professional Voice Confidence & Impact_Z Nqeto.pdf">Finding Your Professional Voice Confidence & Impact Certificate<span>View</span></li>
+                <li data-file="docs\Soft-Skills\Introduction to Personal Branding_Z Nqeto.pdf">Introduction to Personal Branding Certificate<span>View</span></li>
+                <li data-file="docs\Soft-Skills\Leading with Impact_Team Dynamics_ Strategy and Ethics_Z Nqeto.pdf">Leading with Impact Team Dynamics Strategy and Ethics Certificate<span>View</span></li>
+                <li data-file="docs\Soft-Skills\Write Professional Emails in English.pdf">Write Professional Emails in English Certificate<span>View</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="certificate-subcategory" data-subcategory="salesforce">
+            <h4>Salesforce</h4>
+            <div class="certificate-content">
+              <ul>
+                <li data-file="docs\Salesforce\Z Nqeto_Administrator_Certificate.pdf">Salesforce Admin Certificate<span>View</span></li>
+                <li data-file="docs\Salesforce\Z Nqeto_PlatformDeveloperI_Certificate.pdf">Salesforce Platform Developer I<span>View</span></li>
+                <li data-file="docs\Salesforce\Zukwelihle_Systems Dev and Salesforce.pdf">Systems Development and Salesforce Certificate<span>View</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form id="contact-form">
+      <input type="text" id="full-name" name="full-name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">×</span>
+        <iframe id="modal-iframe" src=""></iframe>
+        <a id="modal-download" href="#" download>Download Document</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Zukwelihle Nqeto. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your Public Key
+    (function() {
+      emailjs.init("NzcufdearPhUC-Q5q"); // Replace with your EmailJS Public Key
+    })();
+
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Contact form submission with EmailJS
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_m821uua', 'template_l5ix3q8', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message. Please try again later.');
+          console.error('EmailJS error:', error);
+        });
+    });
+
+    // Accordion functionality for skill categories
+    document.querySelectorAll('.skill-category h4').forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const parent = this.parentElement;
+        const isActive = parent.classList.contains('active');
+        document.querySelectorAll('.skill-category').forEach(category => {
+          category.classList.remove('active');
+        });
+        if (!isActive) {
+          parent.classList.add('active');
+        }
+      });
+    });
+
+    // Accordion functionality for experience items
+    document.querySelectorAll('.experience-item h4').forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const parent = this.parentElement;
+        const isActive = parent.classList.contains('active');
+        document.querySelectorAll('.experience-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        if (!isActive) {
+          parent.classList.add('active');
+        }
+      });
+    });
+
+    // Document category toggle
+    document.querySelectorAll('.document-category').forEach(category => {
+      const icon = category.querySelector('.document-icon');
+      const label = category.querySelector('span');
+      const list = category.querySelector('.document-list');
+      [icon, label].forEach(element => {
+        if (element) {
+          element.addEventListener('click', () => {
+            const isActive = list.classList.contains('active');
+            document.querySelectorAll('.document-list').forEach(otherList => {
+              otherList.classList.remove('active');
+            });
+            if (!isActive) {
+              list.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+
+    // Certificate subcategory toggle
+    document.querySelectorAll('.certificate-subcategory h4').forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const parent = this.parentElement;
+        const isActive = parent.classList.contains('active');
+        document.querySelectorAll('.certificate-subcategory').forEach(subcategory => {
+          subcategory.classList.remove('active');
+        });
+        if (!isActive) {
+          parent.classList.add('active');
+        }
+      });
+    });
+
+    // Document preview and download
+    const modal = document.getElementById('modal');
+    const modalIframe = document.getElementById('modal-iframe');
+    const modalDownload = document.getElementById('modal-download');
+    const modalClose = document.querySelector('.modal-close');
+
+    document.querySelectorAll('.document-list li:not(.certificate-subcategory)').forEach(item => {
+      item.addEventListener('click', () => {
+        const fileUrl = item.getAttribute('data-file');
+        modalIframe.src = fileUrl;
+        modalDownload.href = fileUrl;
+        modalDownload.download = item.textContent.replace('View', '').trim();
+        modal.classList.add('active');
+        document.querySelectorAll('.document-list').forEach(list => {
+          list.classList.remove('active');
+        });
+      });
+    });
+
+    document.querySelectorAll('.certificate-content li').forEach(item => {
+      item.addEventListener('click', () => {
+        const fileUrl = item.getAttribute('data-file');
+        modalIframe.src = fileUrl;
+        modalDownload.href = fileUrl;
+        modalDownload.download = item.textContent.replace('View', '').trim();
+        modal.classList.add('active');
+        document.querySelectorAll('.document-list').forEach(list => {
+          list.classList.remove('active');
+        });
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+      modalIframe.src = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        modalIframe.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
